@@ -5,16 +5,16 @@
 class Snapper < Formula
   desc "Create sanitized development snapshots of your production databases."
   homepage "https://dbsnapper.com/"
-  version "0.3.0"
+  version "0.4.0"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/joescharf/snapper/releases/download/v0.3.0/dbsnapper-cli_snapper_0.3.0_Darwin_x86_64.zip"
-    sha256 "e5b36cc54c9338dc7b23a1dd3f7fee868b7f0ec31f7b2f320ca2a3c33c09a114"
+    url "https://github.com/joescharf/snapper/releases/download/v0.4.0/dbsnapper-cli_snapper_0.4.0_Darwin_x86_64.zip"
+    sha256 "20198a4ba45a5dfdedac72bb10cb10e9ec2e2bc9d9a383ddf805308276536d93"
   end
   if OS.linux? && Hardware::CPU.intel?
-    url "https://github.com/joescharf/snapper/releases/download/v0.3.0/dbsnapper-cli_snapper_0.3.0_Linux_x86_64.zip"
-    sha256 "384529ccd0c4632baa93e8ccf86e6489179aea672c380f50195f54182a3cd3a0"
+    url "https://github.com/joescharf/snapper/releases/download/v0.4.0/dbsnapper-cli_snapper_0.4.0_Linux_x86_64.zip"
+    sha256 "161d4305439a37edd2502e10a9df32e1b5070bb707b22c2b5c6611716217f63f"
   end
 
   def install
