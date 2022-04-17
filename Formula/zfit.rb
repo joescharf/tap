@@ -5,11 +5,11 @@
 class Zfit < Formula
   desc "Zwift FIT file analyzer"
   homepage "https://joescharf.com/"
-  version "0.1.0"
+  version "0.1.1"
 
   on_macos do
-    url "https://github.com/joescharf/zfit/releases/download/v0.1.0/zfit_zfit_0.1.0_Darwin_all.zip"
-    sha256 "5d42334faf72a164c4cddc0e0bec0dd425a429e744591d16fe2761f276dc6b88"
+    url "https://github.com/joescharf/zfit/releases/download/v0.1.1/zfit_zfit_0.1.1_Darwin_all.zip"
+    sha256 "1257c3b3e62e77715c805e662ba624cc84b755ffccfb1df99bc3d99b17000c15"
 
     def install
       bin.install "zfit"
@@ -17,17 +17,17 @@ class Zfit < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joescharf/zfit/releases/download/v0.1.0/zfit_zfit_0.1.0_Linux_x86_64.zip"
-      sha256 "2428017306cfc53d06d1b6798aa316061e7be4ddb4bf64a9089dc5a59a1a1367"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joescharf/zfit/releases/download/v0.1.1/zfit_zfit_0.1.1_Linux_arm64.zip"
+      sha256 "1de959b8022ef2751e684d58d246363064393ce95ddf261b335a395bf05bc17d"
 
       def install
         bin.install "zfit"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joescharf/zfit/releases/download/v0.1.0/zfit_zfit_0.1.0_Linux_arm64.zip"
-      sha256 "36e4112fa5d275daaa5a6f6e9f09a09fa4f96d6c35577aa9abbcbb12018808bc"
+    if Hardware::CPU.intel?
+      url "https://github.com/joescharf/zfit/releases/download/v0.1.1/zfit_zfit_0.1.1_Linux_x86_64.zip"
+      sha256 "0b208db56d770326ac636345d815a29e885031fc550cc359b8e5bc3a9ddbed39"
 
       def install
         bin.install "zfit"
