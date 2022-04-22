@@ -5,11 +5,11 @@
 class Snapper < Formula
   desc "Create sanitized development snapshots of your production databases."
   homepage "https://dbsnapper.com/"
-  version "0.9.4"
+  version "0.9.5"
 
   on_macos do
-    url "https://github.com/joescharf/snapper/releases/download/v0.9.4/dbsnapper_snapper_0.9.4_Darwin_all.zip"
-    sha256 "4f42ca3d244956eaf577672b0b68116f39b1fe72ba04c9ab77f7a83c5697e86e"
+    url "https://github.com/joescharf/snapper/releases/download/v0.9.5/dbsnapper_snapper_0.9.5_Darwin_all.zip"
+    sha256 "edbf9703c4ff41406ba595790d0f2b511b5667c141c7e80939f7060815beb794"
 
     def install
       bin.install "snapper"
@@ -17,17 +17,17 @@ class Snapper < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/joescharf/snapper/releases/download/v0.9.4/dbsnapper_snapper_0.9.4_Linux_x86_64.zip"
-      sha256 "013284914e827cb6ffc3fe264976412a417854f749fd81b5b1a72e9ddbae804e"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/joescharf/snapper/releases/download/v0.9.5/dbsnapper_snapper_0.9.5_Linux_arm64.zip"
+      sha256 "419e9440f07729d0af29a6bc0e5e39161f470b881c747f7795ef271443c727bd"
 
       def install
         bin.install "snapper"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/joescharf/snapper/releases/download/v0.9.4/dbsnapper_snapper_0.9.4_Linux_arm64.zip"
-      sha256 "3c4c7f6b9bc8ab322453e63af5c781cb16e9d2c5c35c4866267aed6a19730c0e"
+    if Hardware::CPU.intel?
+      url "https://github.com/joescharf/snapper/releases/download/v0.9.5/dbsnapper_snapper_0.9.5_Linux_x86_64.zip"
+      sha256 "ea9e14d36377779f32412860e8471755138113ba59f79dc6a3381eb3952409db"
 
       def install
         bin.install "snapper"
