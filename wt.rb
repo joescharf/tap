@@ -5,12 +5,12 @@
 class Wt < Formula
   desc "Git worktree manager with iTerm2 integration"
   homepage "https://github.com/joescharf/wt"
-  version "0.2.0"
+  version "0.3.0"
   license "MIT"
   depends_on :macos
 
-  url "https://github.com/joescharf/wt/releases/download/v0.2.0/wt_darwin_universal.tar.gz"
-  sha256 "d3521423c084ae23a39176be81f31822de138aa688a54eabea5530bdd2b17a2c"
+  url "https://github.com/joescharf/wt/releases/download/v0.3.0/wt_darwin_universal.tar.gz"
+  sha256 "ac333d055c93e1c287a4428100c2c9e519cc0b87b78e44a0c97d8eb37394ee59"
 
   def install
     bin.install "wt"
